@@ -9,9 +9,15 @@ body {
 a {
   color: #df4839;
 }
+a:hover {
+  color: #ff705b;
+  text-decoration: none;
+}
 
 /*ヘッダー,ナビ,フッターの共通設定*/
-
+header,nav,footer {
+  text-align: center;
+}
 
 /*ナビ*/
 
@@ -30,7 +36,7 @@ h1 {
 }
 
 /*大見出しの設定*/
-h2 {
+.h {
   padding: 10px;
   margin-bottom: 30px;
   border: 1px dotted #94c8b1;
@@ -39,19 +45,47 @@ h2 {
 }
 
 /*小見出しの設定*/
-
+.h-sub span{
+  font-weight: normal;
+}
 
 /*コンテンツ枠の設定*/
+#contents {
+  margin: 40px;
+  padding: 40px 80px;
+  border :1px solid #f6bb9e;
+  background-color: #fff;
+}
+
 
 
 /*「もっと見る」リンクの設定*/
+.more {
+  text-align: right;
+}
+.more::after {
+  content: url(img/ico_arrow.png);
+}
+
 
 
 /*リンク種別アイコン*/
+a[target="_blank"]::after {
+  content: url(img/ico_blank.png);
+  margin-left: 5px;
+  vertical-align: middle;
+}
+a[href^="mailto:"]::after {
+  content: url(img/ico_mail.png);
+  margin-left: 5px;
+  vertical-align: middle;
+}
 
 
 /*セクション間隔*/
-
+#contents > section + section {
+  margin-top: 80px;
+}
 
 /*回り込み設定*/
 
