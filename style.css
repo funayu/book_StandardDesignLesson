@@ -2,9 +2,6 @@
 
 /*ウィンドウ背景色の設定*/
 body {
-  /* background-color: #fbf9cc;
-  background-image: url(img/bg.png);
-  background-repeat: repeat-x; */
   background: #fbf9cc url(img/bg.png) repeat-x;
 }
 
@@ -23,12 +20,30 @@ header,nav,footer {
 }
 
 /*ナビ*/
+.menu li {
+  list-style-type: none;
+  display: inline-block;
+  width: 180px;
+  margin: 0 10px;
+}
+.menu a {
+  display: block;
+  padding: 10px;
+  background: #6fbb9a;
+  border-radius: 8px;
+  color: #fff;
+  text-decoration: none;
+}
+.menu a:hover {
+  background: #90ddbb;
+}
+
 /*ページタイトルの設定*/
 h1 {
   width: 300px;
   margin: 40px auto;
   padding: 30px;
-  border: 5px solid #95dbbd;  
+  border: 5px solid #95dbbd;
   background-color: #6fbb9a;
   color: #fff;
   font-size: 300%;
@@ -36,7 +51,7 @@ h1 {
   line-height: 1;
   border-radius: 50%;
   text-shadow: 1px 1px 2px #307657;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
   background-image: linear-gradient(to bottom, #6fbb9a, #4a9d79);
   font-family: 'Limelight', cursive;
 }
@@ -50,6 +65,7 @@ h1 {
   color: #6fbb9a;
   border-radius: 5px 0 0 5px;
 }
+
 
 /*小見出しの設定*/
 .h-sub {
@@ -65,13 +81,12 @@ h1 {
 
 /*コンテンツ枠の設定*/
 #contents {
-  margin: 40px;
+  width: 798px;
+  margin: 40px auto;
   padding: 40px 80px;
-  border :1px solid #f6bb9e;
+  border: 1px solid #f6bb9e;
   background-color: #fff;
 }
-
-
 
 /*「もっと見る」リンクの設定*/
 .more {
@@ -79,9 +94,9 @@ h1 {
 }
 .more::after {
   content: url(img/ico_arrow.png);
+  margin-left: 3px;
+  vertical-align: middle;
 }
-
-
 
 /*リンク種別アイコン*/
 a[target="_blank"]::after {
@@ -95,15 +110,31 @@ a[href^="mailto:"]::after {
   vertical-align: middle;
 }
 
-
 /*セクション間隔*/
 #contents > section + section {
   margin-top: 80px;
 }
 
 /*回り込み設定*/
-
+.imgL {
+  float: left;
+  margin-right: 20px;
+}
+.imgR {
+  float: right;
+  margin-left: 20px;
+}
+.clear {
+  clear: both;
+}
+.clearfix::after {
+  content: "";
+  display: block;
+  clear: both;
+}
 
 /*円形にクリップ*/
-
+.img-round {
+  border-radius: 50%;
+}
 
