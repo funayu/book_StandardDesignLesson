@@ -16,47 +16,75 @@
 </header>
 
 <main id="contents">
+<form id="entryForm" action="#" method="post">
   <p><strong><span class="require">*</span>は必須項目です。</strong></p>
-</main>
   <table border="1">
     <caption>猫ちゃんの情報</caption>
     <tr>
-      <th>お名前</th>
-      <td></td>
+      <th>お名前*</th>
+      <td><input type="text" name="cat-name" required autofocus></td>
     </tr>
     <tr>
-      <th>年齢</th>
-      <td></td>
+      <th>年齢*</th>
+      <td>
+        <select name="age">
+          <option value="" selected required>選択して下さい</option>
+          <option value="0" required>1歳未満</option>
+          <option value="1" required>1〜5歳</option>
+          <option value="2" required>6〜10歳</option>
+          <option value="3" required>11〜15歳</option>
+          <option value="4" required>16〜20歳</option>
+          <option value="5" required>20歳以上</option>
+          <option value="6" required>不明</option>
+        </select>
+      </td>
     </tr>
     <tr>
-      <th>性別</th>
-      <td></td>
+      <th>性別*</th>
+      <td>
+        <input type="radio" name="sex" id="male" value="男の子" required checked><label for="male">男の子</label>
+        <input type="radio" name="sex" id="female" value="女の子" required><label for="female">女の子</label>
+      </td>
     </tr>
     <tr>
       <th>好物</th>
-      <td></td>
+      <td>
+        <input type="checkbox" name="favorite" id="favo1" value="お魚"><label for="favo1">お魚</label>
+        <input type="checkbox" name="favorite" id="favo2" value="お肉"><label for="favo2">お肉</label>
+        <input type="checkbox" name="favorite" id="favo3" value="カリカリ"><label for="favo3">カリカリ</label>
+        <input type="checkbox" name="favorite" id="favo4" value="猫缶"><label for="favo4">猫缶</label>
+        <input type="checkbox" name="favorite" id="favo5" value="ちゅーる"><label for="favo5">ちゅーる</label>
+        <input type="checkbox" name="favorite" id="favo6" value="その他"><label for="favo6">その他</label>
+      </td>
     </tr>
     <tr>
-      <th>写真</th>
-      <td></td>
+      <th>写真*</th>
+      <td><input type="file" name="photo" required></td>
     </tr>
   </table>
 
   <table border="1px">
     <caption>飼い主さんの情報</caption>
     <tr>
-      <th>お名前</th>
-      <td></td>
+      <th>お名前*</th>
+      <td><input type="text" name="name" required placeholder="黒猫小町"></td>
     </tr>
     <tr>
-      <th>メールアドレス</th>
-      <td></td>
+      <th>メールアドレス*</th>
+      <td><input type="email" name="email" required placeholder="sample@gmail.com"></td>
     </tr>
     <tr>
       <th>コメント</th>
       <td></td>
     </tr>
   </table>
+  <div>
+    <input type="reset" value="クリア">
+    <input type="submit" value="投稿">
+  </div>
+</form>
+</main>
+
 <footer>
   <p><small>Copyright © KOMA-NATSU Web All Rights Reserved.</small></p>
 </footer>
