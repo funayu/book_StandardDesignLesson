@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /* CSS Document */
 
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
 }
 body {
   margin: 20px;
@@ -49,21 +49,35 @@ ul {
 }
 .no3 .flex {
   align-items: stretch; /*初期値*/
+  align-items: flex-start;
+  align-items: flex-end;
+  align-items: center;
+  align-items: baseline;
 }
 
 /*flex-wrap*/
 .no4 .flex {
   flex-wrap: nowrap; /*初期値*/
+  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
 }
 
 /*align-content*/
 .no5 .flex {
+  height: 300px;
   flex-wrap: wrap;
   align-content: stretch; /*初期値*/
+  align-content: flex-start;
+  align-content: flex-end;
+  align-content: center;
+  align-content: space-around;
+  align-content: space-between;
 }
 
 /*flex-direction*/
 .no6 .flex {
   flex-direction: row; /*初期値*/
+  flex-direction: row-reverse;
+  flex-direction: column;
+  flex-direction: column-reverse;
 }
-
